@@ -1,0 +1,5 @@
+/usr/local/include/ZmqServer.h
+/usr/local/include/ZmqInterface.h
+/usr/local/include/zmq.hpp
+/usr/local/include/ZmqClient.h
+/usr/local/lib/libzmq_component.so
