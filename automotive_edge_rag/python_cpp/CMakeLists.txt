@@ -1,4 +1,4 @@
- cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.16)
 project(simple_python_binding)
 add_definitions(-DPYBIND11_DETAILED_ERROR_MESSAGES=0)
 

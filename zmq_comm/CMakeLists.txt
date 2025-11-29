@@ -16,7 +16,7 @@ add_library(zmq_component SHARED
 )
 
 target_link_libraries(zmq_component
-     zmq
+    zmq
     Threads::Threads
 )
 

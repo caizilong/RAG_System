@@ -2,4 +2,4 @@
 /sherpa-onnx
 /rknn-llm
 /SummerTTS
-/build
+*/build/*
