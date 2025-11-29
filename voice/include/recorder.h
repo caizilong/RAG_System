@@ -6,27 +6,24 @@
 #include <atomic>
 #include <memory>
 
+#include "conversation_manager.h"
 #include "portaudio.h"
 #include "sherpa-onnx/csrc/online-recognizer.h"
-#include "conversation_manager.h"
 
 class Recorder {
-public:
+   public:
     explicit Recorder(ConversationManager& conv_manager);
     ~Recorder();
 
     void Run();
 
-private:
-    static int32_t RecordCallback(
-        const void* input_buffer,
-        void* output_buffer,
-        unsigned long frames_per_buffer,
-        const PaStreamCallbackTimeInfo* time_info,
-        PaStreamCallbackFlags status_flags,
-        void* user_data);
+   private:
+    static int32_t RecordCallback(const void* input_buffer, void* output_buffer,
+                                  unsigned long frames_per_buffer,
+                                  const PaStreamCallbackTimeInfo* time_info,
+                                  PaStreamCallbackFlags status_flags, void* user_data);
 
-private:
+   private:
     ConversationManager& conv_;
     PaStream* stream_ = nullptr;
 
